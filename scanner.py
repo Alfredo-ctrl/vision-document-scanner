@@ -3,6 +3,7 @@ import numpy as np
 import argparse
 from pathlib import Path
 
+
 def order_points(pts):
     rect = np.zeros((4, 2), dtype="float32")
     s = pts.sum(axis=1)
@@ -12,6 +13,7 @@ def order_points(pts):
     rect[1] = pts[np.argmin(diff)]
     rect[3] = pts[np.argmax(diff)]
     return rect
+
 
 def four_point_transform(image, pts):
     rect = order_points(pts)
@@ -31,8 +33,17 @@ def four_point_transform(image, pts):
     warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight))
     return warped
 
+
 def process_image(image_path: str, output_path: str):
+    input_file = Path(image_path)
+    output_file = Path(output_path)
+    if not input_file.exists():
+        raise FileNotFoundError(f"Input image not found: {input_file}")
+
     image = cv2.imread(image_path)
+    if image is None:
+        raise ValueError(f"Could not read image: {input_file}")
+
     ratio = image.shape[0] / 500.0
     orig = image.copy()
     image = cv2.resize(image, (int(image.shape[1] * (500.0 / image.shape[0])), 500))
@@ -50,10 +61,14 @@ def process_image(image_path: str, output_path: str):
             break
     if screenCnt is None:
         raise ValueError("Contour not found")
+
     warped = four_point_transform(orig, screenCnt.reshape(4, 2) * ratio)
     warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
     T = cv2.adaptiveThreshold(warped, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
-    cv2.imwrite(output_path, T)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    if not cv2.imwrite(str(output_file), T):
+        raise ValueError(f"Could not write output image: {output_file}")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
