@@ -2,6 +2,8 @@
 
 Vision Document Scanner is a small computer vision utility that turns a photo of a document into a clean scanned image. It detects the document edges, corrects perspective, converts the result to grayscale, and applies adaptive thresholding for a high contrast output.
 
+![Vision Document Scanner interface](assets/vision-document-scanner.png)
+
 ## What It Does
 
 - Detects the largest document-like contour in a photo.

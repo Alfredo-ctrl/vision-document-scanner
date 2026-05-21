@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Document Scanner</title>
+  <meta name="description" content="A clean OpenCV document scanner for perspective correction and high contrast output.">
+  <link rel="stylesheet" href="site/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="scanline"></span>
+      <span>
+        <strong>Vision Document Scanner</strong>
+        <small>OpenCV scan pipeline</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="https://github.com/Alfredo-ctrl/vision-document-scanner" target="_blank">Repository</a>
+      <a href="#usage">Usage</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Computer vision utility</p>
+        <h1>Turn a rough document photo into a clean scan.</h1>
+        <p>The tool detects page edges, corrects perspective, and exports a high contrast image from one terminal command.</p>
+      </div>
+      <div class="terminal-card" id="usage">
+        <div class="terminal-bar">
+          <span>scanner.py</span>
+          <span>local run</span>
+        </div>
+        <pre><code>pip install -r requirements.txt
+python scanner.py -i input_image.jpg -o output_image.png</code></pre>
+      </div>
+    </section>
+
+    <section class="scan-demo">
+      <div class="paper input-paper">
+        <span>Input photo</span>
+        <div class="document tilted">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="pipeline">
+        <span>detect</span>
+        <span>warp</span>
+        <span>threshold</span>
+      </div>
+      <div class="paper output-paper">
+        <span>Clean scan</span>
+        <div class="document clean">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details">
+      <article>
+        <h2>Edge detection</h2>
+        <p>Canny edges and contour ranking locate the strongest page-like shape in the image.</p>
+      </article>
+      <article>
+        <h2>Perspective correction</h2>
+        <p>A four point transform straightens the page and crops away the background.</p>
+      </article>
+      <article>
+        <h2>Readable output</h2>
+        <p>Adaptive thresholding produces a crisp black and white image ready for storage or sharing.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
