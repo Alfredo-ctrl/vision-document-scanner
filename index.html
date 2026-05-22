@@ -10,24 +10,28 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#">
-      <span class="scanline"></span>
       <span>
-        <strong>Vision Document Scanner</strong>
-        <small>OpenCV scan pipeline</small>
+        <strong data-i18n="brand">Vision Document Scanner</strong>
+        <small data-i18n="tagline">OpenCV scan pipeline</small>
       </span>
     </a>
+    <button class="language-switch" type="button" aria-label="Switch language" aria-pressed="false">
+      <span>EN</span>
+      <i></i>
+      <span>ES</span>
+    </button>
     <nav class="nav">
-      <a href="https://github.com/Alfredo-ctrl/vision-document-scanner" target="_blank">Repository</a>
-      <a href="#usage">Usage</a>
+      <a href="https://github.com/Alfredo-ctrl/vision-document-scanner" target="_blank" data-i18n="repo">Repository</a>
+      <a href="#usage" data-i18n="usage">Usage</a>
     </nav>
   </header>
 
   <main class="shell">
-    <section class="hero">
+    <section class="hero" data-reveal>
       <div>
-        <p class="eyebrow">Computer vision utility</p>
-        <h1>Turn a rough document photo into a clean scan.</h1>
-        <p>The tool detects page edges, corrects perspective, and exports a high contrast image from one terminal command.</p>
+        <p class="eyebrow" data-i18n="eyebrow">Computer vision utility</p>
+        <h1 data-i18n="headline">Turn a rough document photo into a clean scan.</h1>
+        <p data-i18n="lede">The tool detects page edges, corrects perspective, and exports a high contrast image from one terminal command.</p>
       </div>
       <div class="terminal-card" id="usage">
         <div class="terminal-bar">
@@ -39,9 +43,9 @@ python scanner.py -i input_image.jpg -o output_image.png</code></pre>
       </div>
     </section>
 
-    <section class="scan-demo">
+    <section class="scan-demo" data-reveal>
       <div class="paper input-paper">
-        <span>Input photo</span>
+        <span data-i18n="inputPhoto">Input photo</span>
         <div class="document tilted">
           <div></div>
           <div></div>
@@ -49,12 +53,12 @@ python scanner.py -i input_image.jpg -o output_image.png</code></pre>
         </div>
       </div>
       <div class="pipeline">
-        <span>detect</span>
-        <span>warp</span>
-        <span>threshold</span>
+        <span data-i18n="detect">detect</span>
+        <span data-i18n="warp">warp</span>
+        <span data-i18n="threshold">threshold</span>
       </div>
       <div class="paper output-paper">
-        <span>Clean scan</span>
+        <span data-i18n="cleanScan">Clean scan</span>
         <div class="document clean">
           <div></div>
           <div></div>
@@ -64,20 +68,21 @@ python scanner.py -i input_image.jpg -o output_image.png</code></pre>
       </div>
     </section>
 
-    <section class="details">
+    <section class="details" data-reveal>
       <article>
-        <h2>Edge detection</h2>
-        <p>Canny edges and contour ranking locate the strongest page-like shape in the image.</p>
+        <h2 data-i18n="edgeTitle">Edge detection</h2>
+        <p data-i18n="edgeCopy">Canny edges and contour ranking locate the strongest page-like shape in the image.</p>
       </article>
       <article>
-        <h2>Perspective correction</h2>
-        <p>A four point transform straightens the page and crops away the background.</p>
+        <h2 data-i18n="perspectiveTitle">Perspective correction</h2>
+        <p data-i18n="perspectiveCopy">A four point transform straightens the page and crops away the background.</p>
       </article>
       <article>
-        <h2>Readable output</h2>
-        <p>Adaptive thresholding produces a crisp black and white image ready for storage or sharing.</p>
+        <h2 data-i18n="outputTitle">Readable output</h2>
+        <p data-i18n="outputCopy">Adaptive thresholding produces a crisp black and white image ready for storage or sharing.</p>
       </article>
     </section>
   </main>
+  <script src="site/app.js"></script>
 </body>
 </html>
