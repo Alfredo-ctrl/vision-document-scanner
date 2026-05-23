@@ -245,6 +245,30 @@ code {
   font-size: 15px;
 }
 
+.parallax-frame {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.parallax-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.parallax-frame .simpleParallax {
+  height: 100%;
+}
+
+.terminal-parallax {
+  height: 180px;
+  margin: 0 16px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  opacity: 0.92;
+}
+
 .scan-demo {
   display: grid;
   grid-template-columns: 1fr 180px 1fr;
