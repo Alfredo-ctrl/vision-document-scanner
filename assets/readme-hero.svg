@@ -1,0 +1,13 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vision Document Scanner banner">
+  <rect width="1200" height="360" rx="34" fill="#eef7f2"/>
+  <path d="M0 310 C180 220 310 395 510 286 C706 180 872 336 1200 170" stroke="#2f7d62" stroke-width="2" opacity=".28"/>
+  <path d="M0 58 H1200 M120 0 V360 M280 0 V360 M440 0 V360 M600 0 V360 M760 0 V360 M920 0 V360 M1080 0 V360" stroke="#163d3a" opacity=".08"/>
+  
+    <text x="70" y="128" fill="#163d3a" font-size="22" font-weight="800" letter-spacing="4">VISION-DOCUMENT-SCANNER</text>
+    <text x="70" y="192" fill="#163d3a" font-size="58" font-weight="900">Vision Document Scanner</text>
+    <foreignObject x="70" y="218" width="610" height="88">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="color:#163d3a;font:700 24px Segoe UI, Arial, sans-serif;line-height:1.25">A crisp document capture workflow for edge detection, perspective correction, and export-ready scans.</div>
+    </foreignObject>
+  <rect x="720" y="70" width="330" height="210" rx="8" fill="none" stroke="#163d3a" stroke-width="4"/><path d="M750 240 L840 135 L910 190 L1010 100" fill="none" stroke="#2f7d62" stroke-width="8"/><circle cx="840" cy="135" r="12" fill="#d69c2f"/><path d="M735 105 H1035 M735 145 H1035 M735 185 H1035 M735 225 H1035" stroke="#163d3a" opacity=".25"/>
+  <text x="70" y="315" fill="#163d3a" font-size="18" font-weight="800" opacity=".72">Portfolio README identity 02</text>
+</svg>
