@@ -1,38 +1,15 @@
-<!-- portfolio:start -->
 <p align="center">
-  <img src="assets/readme-hero.svg" alt="Vision Document Scanner banner" width="100%" />
+  <img src="assets/readme-hero.svg" alt="Vision Document Scanner Architectural Banner" width="100%" />
 </p>
 
-<h1 align="center">Vision Document Scanner</h1>
-
-<p align="center"><strong>A crisp document capture workflow for edge detection, perspective correction, and export-ready scans.</strong></p>
-
 <p align="center">
-<img alt="focus: computer vision" src="https://img.shields.io/badge/focus-computer%20vision-2f7d62?style=for-the-badge&labelColor=163d3a" />
-  <img alt="mode: local" src="https://img.shields.io/badge/mode-local-2f7d62?style=for-the-badge&labelColor=163d3a" />
-  <img alt="stack: python + web" src="https://img.shields.io/badge/stack-python%20%2B%20web-2f7d62?style=for-the-badge&labelColor=163d3a" />
+  <img src="https://img.shields.io/badge/DOMAIN-IMAGE%20PROCESSING-0F172A?style=flat-square&labelColor=05080F&color=0284C7" alt="DOMAIN: IMAGE PROCESSING" />
+  <img src="https://img.shields.io/badge/ENGINE-OPENCV%20%2B%20PYTHON-0F172A?style=flat-square&labelColor=05080F&color=1E293B" alt="ENGINE: OPENCV + PYTHON" />
+  <img src="https://img.shields.io/badge/TRANSFORM-4-POINT%20HOMOGRAPHY-0F172A?style=flat-square&labelColor=05080F&color=1E293B" alt="TRANSFORM: 4-POINT HOMOGRAPHY" />
+  <img src="https://img.shields.io/badge/INTERFACE-WEB%20%2B%20CLI-0F172A?style=flat-square&labelColor=05080F&color=1E293B" alt="INTERFACE: WEB + CLI" />
 </p>
-
-## Scanner Character
-
-Clean, paper-first, and practical. The repo reads like a compact lab notebook for turning camera input into usable documents.
-
-## What It Does
-
-Detects document edges, corrects perspective, and presents a small web surface for understanding the workflow.
-
-## Try It
-
-`pip install -r requirements.txt` then run `python scanner.py`.
-
-## Portfolio Note
-
-This repository has its own visual identity inside the portfolio. The goal is that every project feels like a different product, not another copy of the same template.
-<!-- portfolio:end -->
 
 ---
-
-## Existing Project Notes
 
 # Vision Document Scanner
 
